@@ -12,11 +12,11 @@ class Home extends Component {
     this.props.dispatch(allPosts());
   }
 
-  renderRow(realisasi){
+  renderRow(post){
     return (
-      <ListItem key={realisasi.id} >
+      <ListItem key={post.id} >
         <Body>
-          <Text>{realisasi.id}</Text>
+          <Text>{post.id}</Text>
         </Body>
       </ListItem>
     )
@@ -26,7 +26,7 @@ class Home extends Component {
     return (
       <Container>
         <Content>
-          {this.props.data.posts.map((realisasi)=> this.renderRow(realisasi))}
+          {this.props.data.posts.map((post)=> this.renderRow(post))}
         </Content>
       </Container>
     )
